@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CanvasViewController">
+            <connections>
+                <outlet property="containerView" destination="QPI-I1-kXE" id="Xwv-0Z-dNF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-I1-kXE">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="rfr-7S-NnI">
+                            <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                            <items>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="ME8-ej-LNb"/>
+                                <barButtonItem systemItem="trash" id="d8Z-vl-f3f" customClass="CommandBarButton">
+                                    <connections>
+                                        <action selector="touchDeleteItem:" destination="-1" id="Mmu-3e-CR8"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="V03-CI-hNf"/>
+                                <barButtonItem image="save" id="3oB-aP-iuz" customClass="CommandBarButton">
+                                    <connections>
+                                        <action selector="touchSaveItem:" destination="-1" id="NFD-qV-edb"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="7Mw-Vx-9oQ"/>
+                                <barButtonItem tag="2" image="open" id="XaX-5l-BVH">
+                                    <connections>
+                                        <action selector="touchOpenThumbnailItem:" destination="-1" id="xit-1y-aWa"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="Zto-76-fvH"/>
+                                <barButtonItem tag="1" image="palette" id="8hE-9g-kIt">
+                                    <connections>
+                                        <action selector="touchPaletterItem:" destination="-1" id="5Oe-SD-Aol"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="Mik-jc-4lp"/>
+                                <barButtonItem image="undo" id="Vqq-Ja-C85">
+                                    <connections>
+                                        <action selector="touchUnDoItem:" destination="-1" id="AY1-If-Csh"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="jqv-VZ-BSp"/>
+                                <barButtonItem image="redo" id="eeG-D3-HcY">
+                                    <connections>
+                                        <action selector="touchReDoItem:" destination="-1" id="dbU-ed-OWn"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="EJh-rt-6dz"/>
+                            </items>
+                            <color key="barTintColor" red="1" green="0.28235294119999998" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </toolbar>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="rfr-7S-NnI" firstAttribute="width" secondItem="QPI-I1-kXE" secondAttribute="width" id="Sen-nK-iAx"/>
+                        <constraint firstAttribute="bottom" secondItem="rfr-7S-NnI" secondAttribute="bottom" id="isi-i3-HsH"/>
+                        <constraint firstItem="rfr-7S-NnI" firstAttribute="centerX" secondItem="QPI-I1-kXE" secondAttribute="centerX" id="tui-JV-JTq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="QPI-I1-kXE" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="73g-13-fKG"/>
+                <constraint firstItem="QPI-I1-kXE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7ip-5z-5Hw"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="QPI-I1-kXE" secondAttribute="bottom" id="Uft-Q9-gp1"/>
+                <constraint firstItem="QPI-I1-kXE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f3w-22-QrH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-109" y="155"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="open" width="24" height="24"/>
+        <image name="palette" width="24" height="20"/>
+        <image name="redo" width="24" height="24"/>
+        <image name="save" width="24" height="24"/>
+        <image name="undo" width="24" height="24"/>
+    </resources>
+</document>
