@@ -10,14 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^RGBValuesProvider)(CGFloat red,CGFloat green,CGFloat blue);
+typedef void(^RGBValuesProvider)(CGFloat *red,CGFloat *green,CGFloat *blue);
 typedef void(^POstColorUpdateProvider)(UIColor *color);
 
 @class SetStrokeColorCommand;
 
 @protocol SetStrokeColorCommandDelegate <NSObject>
 
-- (void)command:(SetStrokeColorCommand *)command didRequestColorComponentsForRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
+- (void)command:(SetStrokeColorCommand *)command didRequestColorComponentsForRed:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue;
 - (void)command:(SetStrokeColorCommand *)command didFinishColorUpdateWithColor:(UIColor *)color;
 
 @end

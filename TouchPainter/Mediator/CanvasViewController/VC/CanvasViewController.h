@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class CanvasViewGenerator;
+
 @interface CanvasViewController : UIViewController
 
 /** scribble */
@@ -19,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat strokeSize;
 /** strokeColor */
 @property (nonatomic,strong) UIColor *strokeColor;
+
+- (void)loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator;
 
 @end
 

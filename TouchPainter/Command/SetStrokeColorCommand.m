@@ -20,11 +20,11 @@
     CGFloat blue = 0.0;
     
     if (self.colorDelegate != nil && [self.colorDelegate respondsToSelector:@selector(command:didRequestColorComponentsForRed:green:blue:)]) {
-        [self.colorDelegate command:self didRequestColorComponentsForRed:red green:green blue:blue];
+        [self.colorDelegate command:self didRequestColorComponentsForRed:&red green:&green blue:&blue];
     }
     
     if (self.RGBValuesProvider) {
-        self.RGBValuesProvider(red, green, blue);
+        self.RGBValuesProvider(&red, &green, &blue);
     }
     
     UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];

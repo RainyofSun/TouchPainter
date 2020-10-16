@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol SetStrokeSizeCommandDelegate <NSObject>
 
-- (void)command:(SetStrokeSizeCommand *)command didRequestForStrokeSize:(CGFloat)size;
+- (void)command:(SetStrokeSizeCommand *)command didRequestForStrokeSize:(CGFloat *)size;
 
 @end
 

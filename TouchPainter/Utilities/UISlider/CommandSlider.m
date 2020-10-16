@@ -18,4 +18,12 @@
 }
 */
 
+#pragma mark - lazy
+- (Command *)command {
+    if (!_command) {
+        _command = [[Command alloc] init];
+    }
+    return _command;
+}
+
 @end

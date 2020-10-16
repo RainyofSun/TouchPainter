@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThumbnailViewController">
             <connections>
+                <outlet property="thumbnailTableView" destination="e7v-Fz-csN" id="VfM-MA-8pA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,34 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdU-nV-GQU">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="4K2-Cv-reJ">
+                            <barButtonItem key="rightBarButtonItem" title="Down" style="done" id="8zQ-4d-XRb">
+                                <connections>
+                                    <action selector="touchDown:" destination="-1" id="dJK-2l-GzW"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e7v-Fz-csN">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="e7v-Fz-csN" secondAttribute="bottom" id="31N-H6-THW"/>
+                <constraint firstItem="e7v-Fz-csN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="HQg-YX-QbV"/>
+                <constraint firstItem="CdU-nV-GQU" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="TxG-aH-iyn"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="e7v-Fz-csN" secondAttribute="trailing" id="U5K-Mq-tuW"/>
+                <constraint firstItem="CdU-nV-GQU" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="cnQ-bP-AQV"/>
+                <constraint firstItem="CdU-nV-GQU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d4w-Wk-zts"/>
+                <constraint firstItem="e7v-Fz-csN" firstAttribute="top" secondItem="CdU-nV-GQU" secondAttribute="bottom" id="dnc-UZ-VQy"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="132" y="123"/>
         </view>

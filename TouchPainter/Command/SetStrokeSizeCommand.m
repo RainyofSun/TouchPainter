@@ -17,7 +17,7 @@
 - (void)execute {
     CGFloat strokeSize = 1;
     if (self.delegate != nil && [self.delegate respondsToSelector:@selector(command:didRequestForStrokeSize:)]) {
-        [self.delegate command:self didRequestForStrokeSize:strokeSize];
+        [self.delegate command:self didRequestForStrokeSize:&strokeSize];
     }
     
     [[CoordinatingController sharedInstance].canvasViewController setStrokeSize:strokeSize];

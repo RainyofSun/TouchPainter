@@ -23,6 +23,8 @@
 		13199998251DDA7300E81A5E /* SaveScribbleCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 13199997251DDA7300E81A5E /* SaveScribbleCommand.m */; };
 		1319999C251DDC3000E81A5E /* UIView+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1319999B251DDC3000E81A5E /* UIView+UIImage.m */; };
 		131999A0251DDE9400E81A5E /* ScribbleMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = 1319999F251DDE9400E81A5E /* ScribbleMemento.m */; };
+		131F45C62536F4EF00A6385A /* ScribbleThumbnailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F45C42536F4EF00A6385A /* ScribbleThumbnailTableViewCell.m */; };
+		131F45C72536F4F000A6385A /* ScribbleThumbnailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131F45C52536F4EF00A6385A /* ScribbleThumbnailTableViewCell.xib */; };
 		1320F556252063140094FC28 /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 1320F555252063140094FC28 /* Scribble.m */; };
 		1320F559252068F10094FC28 /* ScribbleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1320F558252068F10094FC28 /* ScribbleManager.m */; };
 		1320F55C25218E740094FC28 /* DeleteScribbleCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1320F55B25218E740094FC28 /* DeleteScribbleCommand.m */; };
@@ -83,6 +85,9 @@
 		1319999E251DDE9400E81A5E /* ScribbleMemento.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento.h; sourceTree = "<group>"; };
 		1319999F251DDE9400E81A5E /* ScribbleMemento.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribbleMemento.m; sourceTree = "<group>"; };
 		131999A1251DDF2B00E81A5E /* ScribbleMemento+Friend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScribbleMemento+Friend.h"; sourceTree = "<group>"; };
+		131F45C32536F4EF00A6385A /* ScribbleThumbnailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScribbleThumbnailTableViewCell.h; sourceTree = "<group>"; };
+		131F45C42536F4EF00A6385A /* ScribbleThumbnailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribbleThumbnailTableViewCell.m; sourceTree = "<group>"; };
+		131F45C52536F4EF00A6385A /* ScribbleThumbnailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScribbleThumbnailTableViewCell.xib; sourceTree = "<group>"; };
 		1320F554252063140094FC28 /* Scribble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scribble.h; sourceTree = "<group>"; };
 		1320F555252063140094FC28 /* Scribble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
 		1320F557252068F10094FC28 /* ScribbleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScribbleManager.h; sourceTree = "<group>"; };
@@ -371,6 +376,9 @@
 				134CCA74251AFF67001A33EE /* ThumbnailViewController.h */,
 				134CCA75251AFF67001A33EE /* ThumbnailViewController.m */,
 				134CCA76251AFF67001A33EE /* ThumbnailViewController.xib */,
+				131F45C32536F4EF00A6385A /* ScribbleThumbnailTableViewCell.h */,
+				131F45C42536F4EF00A6385A /* ScribbleThumbnailTableViewCell.m */,
+				131F45C52536F4EF00A6385A /* ScribbleThumbnailTableViewCell.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -507,6 +515,7 @@
 				134CCA93251B2E66001A33EE /* MediaRes.xcassets in Resources */,
 				134CCA78251AFF67001A33EE /* ThumbnailViewController.xib in Resources */,
 				134CCA7E251AFF91001A33EE /* PaletterViewController.xib in Resources */,
+				131F45C72536F4F000A6385A /* ScribbleThumbnailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +554,7 @@
 				1319997F251DA02E00E81A5E /* Dot.m in Sources */,
 				1319998D251DA7EB00E81A5E /* NSMutableArray+Stack.m in Sources */,
 				1320F564252197400094FC28 /* SetStrokeSizeCommand.m in Sources */,
+				131F45C62536F4EF00A6385A /* ScribbleThumbnailTableViewCell.m in Sources */,
 				134CCA77251AFF67001A33EE /* ThumbnailViewController.m in Sources */,
 				13199995251DDA0800E81A5E /* Command.m in Sources */,
 				1320F5712521CBB80094FC28 /* CommandBarButton.m in Sources */,
